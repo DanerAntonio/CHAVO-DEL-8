@@ -1,16 +1,22 @@
 const Usuario = require('../Models/UsuarioModel');
+const validatePassword = require('../Utils/PasswordValidator');
 
 // Crear un nuevo usuario
 exports.createUser = async (req, res) => {
   try {
-    const { name, email, status } = req.body;
+    const { name, email, password, confirmPassword, status } = req.body;
 
     // Validación de entrada
-    if (!name || !email) {
-      return res.status(400).json({ message: 'Nombre y email son obligatorios' });
+    if (!name || !email || !password || !confirmPassword) {
+      return res.status(400).json({ message: 'Nombre, email y contraseñas son obligatorios' });
     }
 
-    const newUser = new Usuario({ name, email, status }); // Cambié User a Usuario
+    // Validar que las contraseñas coincidan
+    if (password !== confirmPassword) {
+      return res.status(400).json({ message: 'Las contraseñas no coinciden' });
+    }
+
+    const newUser = new Usuario({ name, email, password, status });
     await newUser.save();
     res.status(201).json({ message: 'Usuario creado', user: newUser });
   } catch (error) {
@@ -21,7 +27,7 @@ exports.createUser = async (req, res) => {
 // Obtener todos los usuarios
 exports.getUsers = async (req, res) => {
   try {
-    const users = await Usuario.find(); // Cambié User a Usuario
+    const users = await Usuario.find();
     res.status(200).json(users);
   } catch (error) {
     res.status(400).json({ error: error.message });
@@ -32,7 +38,7 @@ exports.getUsers = async (req, res) => {
 exports.updateUser = async (req, res) => {
   try {
     const { id } = req.params;
-    const updatedUser = await Usuario.findByIdAndUpdate(id, req.body, { new: true }); // Cambié User a Usuario
+    const updatedUser = await Usuario.findByIdAndUpdate(id, req.body, { new: true });
     if (!updatedUser) {
       return res.status(404).json({ message: 'Usuario no encontrado' });
     }
@@ -46,12 +52,12 @@ exports.updateUser = async (req, res) => {
 exports.deleteUser = async (req, res) => {
   try {
     const { id } = req.params;
-    const deletedUser = await Usuario.findByIdAndDelete(id); // Cambié User a Usuario
+    const deletedUser = await Usuario.findByIdAndDelete(id);
     if (!deletedUser) {
       return res.status(404).json({ message: 'Usuario no encontrado' });
     }
     res.status(200).json({ message: 'Usuario eliminado' });
   } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
+    res.status(400).json({ error: error.message });
+  }
 };

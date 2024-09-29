@@ -16,6 +16,12 @@ const usuarioSchema = new mongoose.Schema({
       message: props => `${props.value} no es un correo válido!`
     }
   },
+  password: {
+    type: String,
+    required: true,
+    minlength: 8  // Por ejemplo, al menos 6 caracteres
+  },
+  
   status: {
     type: String,
     enum: ['activo', 'inactivo'],
@@ -23,4 +29,4 @@ const usuarioSchema = new mongoose.Schema({
   }
 }, { timestamps: true });
 
-module.exports = mongoose.model('Usuario', usuarioSchema); // Cambié 'usuario' a 'Usuario'
+module.exports = mongoose.model('Usuario', usuarioSchema);

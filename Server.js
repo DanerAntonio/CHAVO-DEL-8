@@ -27,6 +27,7 @@ app.use('/Api/Usuario', require('./Src/Routes/UsuarioRoutes')); // SI
 app.use('/Api/Ventas', require('./Src/Routes/VentasRoutes')); // SI
 
 // Middleware para manejar rutas no encontradas
+
 app.use((req, res, next) => {
   res.status(404).json({ message: 'Ruta no encontrada' });
 });
