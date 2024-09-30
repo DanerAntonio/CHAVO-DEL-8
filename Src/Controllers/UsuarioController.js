@@ -1,5 +1,35 @@
+const bcrypt = require('bcrypt'); // Asegúrate de tener bcrypt instalado
 const Usuario = require('../Models/UsuarioModel');
 const validatePassword = require('../Utils/PasswordValidator');
+
+// Iniciar sesión
+exports.loginUser = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    // Verifica que se ingresen los campos requeridos
+    if (!email || !password) {
+      return res.status(400).json({ message: 'Email y contraseña son obligatorios' });
+    }
+
+    // Busca al usuario por el email
+    const user = await Usuario.findOne({ email });
+    if (!user) {
+      return res.status(401).json({ message: 'Email o contraseña incorrectos' });
+    }
+
+    // Verifica la contraseña
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.status(401).json({ message: 'Email o contraseña incorrectos' });
+    }
+
+    // Aquí podrías devolver un token o información del usuario
+    res.status(200).json({ message: 'Inicio de sesión exitoso', user });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
 
 // Crear un nuevo usuario
 exports.createUser = async (req, res) => {
