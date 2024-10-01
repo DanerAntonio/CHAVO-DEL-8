@@ -1,14 +1,15 @@
 const Usuario = require('../Models/UsuarioModel');
-const validatePassword = require('../Utils/PasswordValidator');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
-// Crear un nuevo usuario
+// Crear un nuevo usuario (Registro)
 exports.createUser = async (req, res) => {
   try {
-    const { name, email, password, confirmPassword, status } = req.body;
+    const { name, email, password, confirmPassword } = req.body;
 
     // Validación de entrada
     if (!name || !email || !password || !confirmPassword) {
-      return res.status(400).json({ message: 'Nombre, email y contraseñas son obligatorios' });
+      return res.status(400).json({ message: 'Todos los campos son obligatorios' });
     }
 
     // Validar que las contraseñas coincidan
@@ -16,21 +17,62 @@ exports.createUser = async (req, res) => {
       return res.status(400).json({ message: 'Las contraseñas no coinciden' });
     }
 
-    const newUser = new Usuario({ name, email, password, status });
+    // Validar si el usuario ya existe
+    const existingUser = await Usuario.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ message: 'El usuario ya existe' });
+    }
+
+    // Hashear la contraseña
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Crear nuevo usuario
+    const newUser = new Usuario({
+      name,
+      email,
+      password: hashedPassword
+    });
+
     await newUser.save();
-    res.status(201).json({ message: 'Usuario creado', user: newUser });
+    res.status(201).json({ message: 'Usuario creado exitosamente', user: newUser });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(500).json({ error: 'Error interno del servidor' });
   }
 };
 
-// Obtener todos los usuarios
+// Inicio de sesión (Login)
+exports.loginUser = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    // Verificar si el usuario existe
+    const user = await Usuario.findOne({ email });
+    if (!user) {
+      return res.status(400).json({ message: 'Usuario no encontrado' });
+    }
+
+    // Comparar contraseñas
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.status(400).json({ message: 'Contraseña incorrecta' });
+    }
+
+    // Crear un token JWT
+    const token = jwt.sign({ id: user._id }, 'your_jwt_secret', { expiresIn: '1h' });
+
+    res.status(200).json({ message: 'Login exitoso', token });
+  } catch (error) {
+    res.status(500).json({ error: 'Error interno del servidor' });
+  }
+};
+
+// Obtener todos los usuarios (Protegido con JWT)
 exports.getUsers = async (req, res) => {
   try {
     const users = await Usuario.find();
     res.status(200).json(users);
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(500).json({ error: 'Error interno del servidor' });
   }
 };
 
@@ -44,7 +86,7 @@ exports.updateUser = async (req, res) => {
     }
     res.status(200).json({ message: 'Usuario actualizado', user: updatedUser });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(500).json({ error: 'Error interno del servidor' });
   }
 };
 
@@ -58,6 +100,6 @@ exports.deleteUser = async (req, res) => {
     }
     res.status(200).json({ message: 'Usuario eliminado' });
   } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
+    res.status(500).json({ error: 'Error interno del servidor' });
+  }
 };

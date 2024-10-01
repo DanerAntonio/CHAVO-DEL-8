@@ -1,11 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const UsuarioController = require('../Controllers/UsuarioController');
+const verifyToken = require('../../Middlewares/verifyToken');
 
-// Rutas para usuarios
-router.post('/', UsuarioController.createUser); // Crear usuario
-router.get('/', UsuarioController.getUsers); // Obtener usuarios
-router.put('/:id', UsuarioController.updateUser); // Actualizar usuario
-router.delete('/:id', UsuarioController.deleteUser); // Eliminar usuario
+// Rutas públicas
+router.post('/login', UsuarioController.loginUser);
+router.post('/register', UsuarioController.createUser);
+
+// Rutas protegidas con verificación de token
+router.get('/users', verifyToken, UsuarioController.getUsers);
+router.put('/users/:id', verifyToken, UsuarioController.updateUser);
+router.delete('/users/:id', verifyToken, UsuarioController.deleteUser);
 
 module.exports = router;
