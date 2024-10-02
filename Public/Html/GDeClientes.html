@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Teo/Cat</title>
+
+
+    <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.jpeg" />
+    <link rel="stylesheet" href="../assets/css/styles.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/themify-icons/0.1.2/css/themify-icons.min.css">
+    <link rel="stylesheet" href="../Css/GdeCategoria.css">
+</head>
+
+<body>
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed">
+        <!-- Sidebar Start -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div>
+                <div class="brand-logo d-flex align-items-center justify-content-between">
+                    <a href="./index.html" class="text-nowrap logo-img">
+                        <img src="../assets/images/logos/1.png" width="180" alt="" />
+                    </a>
+                    <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                        <i class="ti ti-x fs-8"></i>
+                    </div>
+                </div>
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+                    <ul id="sidebarnav">
+                        <li class="nav-small-cap">
+                            <i class="ti ti-menu-2 nav-small-cap-icon fs-4"></i>
+                            <span class="hide-menu">Menu Principal</span>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="index.html">
+                                <span>
+                                    <i class="ti ti-home"></i>
+                                </span>
+                                <span class="hide-menu">Inicio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr />
+                        </li>
+
+                        <!-- Dashboard -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="#dashboardSubmenu" data-bs-toggle="collapse"
+                                aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-dashboard"></i>
+                                </span>
+                                <span class="hide-menu">Dashboard</span>
+                            </a>
+                            <ul id="dashboardSubmenu" class="collapse first-level">
+                                <li class="sidebar-item">
+                                    <a href="GestionDesempeno.html" class="sidebar-link">
+                                        <i class="ti ti-chart-bar"></i>
+                                        <span class="hide-menu">Gestión De Desempeño</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <hr />
+                        </li>
+
+                        <!-- Configuración -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="#configSubmenu" data-bs-toggle="collapse"
+                                aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-settings"></i>
+                                </span>
+                                <span class="hide-menu">Configuración</span>
+                            </a>
+                            <ul id="configSubmenu" class="collapse first-level">
+                                <li class="sidebar-item">
+                                    <a href="GestiónDeRoles.html" class="sidebar-link">
+                                        <i class="ti ti-user-check"></i>
+                                        <span class="hide-menu">Gestión De Roles</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <hr />
+                        </li>
+
+                        <!-- Usuarios -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="#userSubmenu" data-bs-toggle="collapse"
+                                aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-users"></i>
+                                </span>
+                                <span class="hide-menu">Usuarios</span>
+                            </a>
+                            <ul id="userSubmenu" class="collapse first-level">
+                                <li class="sidebar-item">
+                                    <a href="GestiónDeUsuarios.html" class="sidebar-link">
+                                        <i class="ti ti-user-plus"></i>
+                                        <span class="hide-menu">Gestión De Usuarios</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="GestiónDeAcceso.html" class="sidebar-link">
+                                        <i class="ti ti-lock"></i>
+                                        <span class="hide-menu">Gestión De Acceso</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <hr />
+                        </li>
+
+                        <!-- Categorías -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="#categoriasSubmenu" data-bs-toggle="collapse"
+                                aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-category"></i>
+                                </span>
+                                <span class="hide-menu">Categorías</span>
+                            </a>
+                            <ul id="categoriasSubmenu" class="collapse first-level">
+                                <li class="sidebar-item">
+                                    <a href="CategoriasProductos.html" class="sidebar-link">
+                                        <i class="ti ti-box"></i>
+                                        <span class="hide-menu">Categorías De Productos</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <hr />
+                        </li>
+
+                        <!-- Compras -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="#comprasSubmenu" data-bs-toggle="collapse"
+                                aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-shopping-cart"></i>
+                                </span>
+                                <span class="hide-menu">Compras</span>
+                            </a>
+                            <ul id="comprasSubmenu" class="collapse first-level">
+                                <li class="sidebar-item">
+                                    <a href="GDeProductos.html" class="sidebar-link">
+                                        <i class="ti ti-package"></i>
+                                        <span class="hide-menu">Gestión De Productos</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="GDeProveedores.html" class="sidebar-link">
+                                        <i class="ti ti-truck-delivery"></i>
+                                        <span class="hide-menu">Gestión De Proveedores</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="GDeCompras.html" class="sidebar-link">
+                                        <i class="ti ti-receipt"></i>
+                                        <span class="hide-menu">Gestión De Compras</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <hr />
+                        </li>
+
+                        <!-- Ventas -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="#ventasSubmenu" data-bs-toggle="collapse"
+                                aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-cash"></i>
+                                </span>
+                                <span class="hide-menu">Ventas</span>
+                            </a>
+                            <ul id="ventasSubmenu" class="collapse first-level">
+                                <li class="sidebar-item">
+                                    <a href="GDeClientes.html" class="sidebar-link">
+                                        <i class="ti ti-user-circle"></i>
+                                        <span class="hide-menu">Gestión De Clientes</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="GDePedidos.html" class="sidebar-link">
+                                        <i class="ti ti-clipboard-list"></i>
+                                        <span class="hide-menu">Gestión De Pedidos</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="GDeVentas.html" class="sidebar-link">
+                                        <i class="ti ti-report-money"></i>
+                                        <span class="hide-menu">Gestión De Ventas</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="GDeDevoluciones2.html" class="sidebar-link">
+                                        <i class="ti ti-arrow-back-up"></i>
+                                        <span class="hide-menu">Devoluciones</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="GDeDevoluciones2.html" class="sidebar-link">
+                                        <i class="ti ti-exchange"></i>
+                                        <span class="hide-menu">Devoluciones2</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!--  Sidebar End -->
+        <!--  Main wrapper -->
+        <div class="body-wrapper">
+
+            <!--  Header Start -->
+            <header class="app-header">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <ul class="navbar-nav">
+                        <li class="nav-item d-block d-xl-none">
+                            <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse"
+                                href="javascript:void(0)">
+                                <i class="ti ti-menu-2"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                                <i class="ti ti-bell-ringing"></i>
+                                <div class="notification bg-primary rounded-circle"></div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+                        <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+
+                            <!-- Carrito de compras -->
+                            <li class="nav-item">
+                                <a class="nav-link nav-icon-hover" href="Carrito.html">
+                                    <i class="ti ti-shopping-cart"></i>
+                                </a>
+                            </li>
+
+                            <!-- Perfil de usuario -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35"
+                                        class="rounded-circle">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
+                                    aria-labelledby="drop2">
+                                    <div class="message-body">
+                                        <a href="MiPerfil.html" class="d-flex align-items-center gap-2 dropdown-item">
+                                            <i class="ti ti-user fs-6"></i>
+                                            <p class="mb-0 fs-3">Mi Perfil</p>
+                                        </a>
+                                        <a href="Login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Cerrar
+                                            Sesion</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!--  Header End -->
+
+            <div class="container-fluid"></div>
+          <div class="container mt-5">
+              <h1 class="mb-4">Gestión de Clientes</h1>
+              <div class="row mb-3">
+                  <div class="col-md-6">
+                      <input type="text" id="searchInput" class="form-control" placeholder="Buscar cliente por nombre...">
+                  </div>
+                  <div class="col-md-6">
+                      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createCustomerModal">
+                          Crear Cliente
+                      </button>
+                  </div>
+              </div>
+              <div class="table-container">
+                  <table class="table table-striped">
+                      <thead>
+                          <tr>
+                              <th>Nombre</th>
+                              <th>Correo</th>
+                              <th>Teléfono</th>
+                              <th>Dirección</th>
+                              <th>Estado</th>
+                              <th>Acciones</th>
+                          </tr>
+                      </thead>
+                      <tbody id="customerTableBody"></tbody>
+                  </table>
+              </div>
+          </div>
+      
+          <!-- Modal para Crear Cliente -->
+          <div class="modal fade" id="createCustomerModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title">Crear Cliente</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <form id="createCustomerForm">
+                              <div class="mb-3">
+                                  <label for="createCustomerName" class="form-label">Nombre</label>
+                                  <input type="text" class="form-control" id="createCustomerName" required>
+                              </div>
+                              <div class="mb-3">
+                                  <label for="createCustomerEmail" class="form-label">Correo</label>
+                                  <input type="email" class="form-control" id="createCustomerEmail" required pattern="^\S+@\S+\.\S+$">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="createCustomerPhone" class="form-label">Teléfono</label>
+                                  <input type="tel" class="form-control" id="createCustomerPhone" required pattern="^\d+$">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="createCustomerAddress" class="form-label">Dirección</label>
+                                  <input type="text" class="form-control" id="createCustomerAddress" required>
+                              </div>
+                              <div class="mb-3 form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" id="createCustomerStatus" checked>
+                                  <label class="form-check-label" for="createCustomerStatus">Estado (Activo/Inactivo)</label>
+                              </div>
+                          </form>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          <button type="button" class="btn btn-primary" id="saveCreateCustomerButton">Guardar Cliente</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Modal para Editar Cliente -->
+          <div class="modal fade" id="editCustomerModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title">Editar Cliente</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <form id="editCustomerForm">
+                              <input type="hidden" id="editCustomerId">
+                              <div class="mb-3">
+                                  <label for="editCustomerName" class="form-label">Nombre</label>
+                                  <input type="text" class="form-control" id="editCustomerName" required>
+                              </div>
+                              <div class="mb-3">
+                                  <label for="editCustomerEmail" class="form-label">Correo</label>
+                                  <input type="email" class="form-control" id="editCustomerEmail" required pattern="^\S+@\S+\.\S+$">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="editCustomerPhone" class="form-label">Teléfono</label>
+                                  <input type="tel" class="form-control" id="editCustomerPhone" required pattern="^\d+$">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="editCustomerAddress" class="form-label">Dirección</label>
+                                  <input type="text" class="form-control" id="editCustomerAddress" required>
+                              </div>
+                              <div class="mb-3 form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" id="editCustomerStatus">
+                                  <label class="form-check-label" for="editCustomerStatus">Estado (Activo/Inactivo)</label>
+                              </div>
+                          </form>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          <button type="button" class="btn btn-primary" id="saveEditCustomerButton">Guardar Cambios</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Modal para Ver Detalles del Cliente -->
+          <div class="modal fade" id="viewCustomerModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title">Detalles del Cliente</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <dl class="row">
+                              <dt class="col-sm-3">Nombre:</dt>
+                              <dd class="col-sm-9" id="viewCustomerName"></dd>
+                              <dt class="col-sm-3">Correo:</dt>
+                              <dd class="col-sm-9" id="viewCustomerEmail"></dd>
+                              <dt class="col-sm-3">Teléfono:</dt>
+                              <dd class="col-sm-9" id="viewCustomerPhone"></dd>
+                              <dt class="col-sm-3">Dirección:</dt>
+                              <dd class="col-sm-9" id="viewCustomerAddress"></dd>
+                              <dt class="col-sm-3">Estado:</dt>
+                              <dd class="col-sm-9" id="viewCustomerStatus"></dd>
+                          </dl>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+          <script>
+              // URL base de la API
+              const API_URL = 'https://chavo-del-8.onrender.com/Api/Cliente';
+      
+              // Array para almacenar los clientes
+              let clientes = [];
+      
+              // Función para cargar los clientes desde la API
+              async function cargarClientes() {
+                  try {
+                      const response = await fetch(API_URL);
+                      if (!response.ok) {
+                          throw new Error('Error al cargar los clientes');
+                      }
+                      clientes = await response.json();
+                      actualizarTabla();
+                  } catch (error) {
+                      console.error('Error:', error);
+                      mostrarAlerta(`Error al cargar los clientes: ${error.message}`, 'error');
+                  }
+              }
+      
+              // Función para actualizar la tabla de clientes
+              function actualizarTabla(filteredClientes = clientes) {
+                  const tableBody = document.getElementById('customerTableBody');
+                  tableBody.innerHTML = '';
+      
+                  filteredClientes.forEach(cliente => {
+                      const row = `
+                          <tr>
+                              <td>${cliente.nombre}</td>
+                              <td>${cliente.correo}</td>
+                              <td>${cliente.telefono}</td>
+                              <td>${cliente.direccion}</td>
+                              <td>
+                                  <div class="form-check form-switch">
+                                      <input class="form-check-input" type="checkbox" id="status_${cliente._id}" 
+                                          ${cliente.estado === 'activo' ? 'checked' : ''} 
+                                          onchange="cambiarEstado('${cliente._id}', this.checked)">
+                                      <label class="form-check-label" for="status_${cliente._id}">
+                                          ${cliente.estado === 'activo' ? 'Activo' : 'Inactivo'}
+                                      </label>
+                                  </div>
+                              </td>
+                              <td>
+                                  <button class="btn btn-info btn-sm me-1" onclick="verDetalleCliente('${cliente._id}')">
+                                      <i class="bi bi-eye"></i>
+                                  </button>
+                                  <button class="btn btn-primary btn-sm me-1" onclick="abrirModalEditar('${cliente._id}')">
+                                      <i class="bi bi-pencil"></i>
+                                  </button>
+                                  <button class="btn btn-danger btn-sm" onclick="eliminarCliente('${cliente._id}')">
+                                      <i class="bi bi-trash"></i>
+                                  </button>
+                              </td>
+                          </tr>
+                      `;
+                      tableBody.innerHTML += row;
+                  });
+              }
+      
+              // Función para cambiar el estado del cliente
+              async function cambiarEstado(id, nuevoEstado) {
+                  const cliente = clientes.find(c => c._id === id);
+                  if (cliente) {
+                      cliente.estado = nuevoEstado ? 'activo' : 'inactivo';
+                      try {
+                          const response = await fetch(`${API_URL}/${id}`, {
+                              method: 'PUT',
+                              headers: { 'Content-Type': 'application/json' },
+                              body: JSON.stringify(cliente),
+                          });
+      
+                          if (!response.ok) throw new Error('Error al actualizar el estado del cliente');
+                          
+                          mostrarAlerta('Estado del cliente actualizado exitosamente', 'success');
+                          actualizarTabla();
+                      } catch (error) {
+                          console.error('Error:', error);
+                          mostrarAlerta('Error al actualizar el estado del cliente', 'error');
+                      }
+                  }
+              }
+      
+              // Función para validar el formulario
+              function validarFormulario(nombre, correo, telefono, direccion) {
+                  if (!nombre || !correo || !telefono || !direccion) {
+                      mostrarAlerta('Por favor, complete todos los campos.', 'error');
+                      return false;
+                  }
+                  if (!/^\S+@\S+\.\S+$/.test(correo)) {
+                      mostrarAlerta('Por favor, ingrese un correo electrónico válido.', 'error');
+                      return false;
+                  }
+                  if (!/^\d+$/.test(telefono)) {
+                      mostrarAlerta('Por favor, ingrese un número de teléfono válido (solo números).', 'error');
+                      return false;
+                  }
+                  return true;
+              }
+      
+              // Función para crear un cliente
+              async function crearCliente(event) {
+                  event.preventDefault();
+                  const nombre = document.getElementById('createCustomerName').value;
+                  const correo = document.getElementById('createCustomerEmail').value;
+                  const telefono = document.getElementById('createCustomerPhone').value;
+                  const direccion = document.getElementById('createCustomerAddress').value;
+                  const estado = document.getElementById('createCustomerStatus').checked ? 'activo' : 'inactivo';
+      
+                  if (!validarFormulario(nombre, correo, telefono, direccion)) {
+                      return;
+                  }
+      
+                  const nuevoCliente = { nombre, correo, telefono, direccion, estado };
+      
+                  try {
+                      const response = await fetch(API_URL, {
+                          method: 'POST',
+                          headers: { 'Content-Type': 'application/json' },
+                          body: JSON.stringify(nuevoCliente),
+                      });
+      
+                      if (!response.ok) throw new Error('Error al crear el cliente');
+                      
+                      await cargarClientes();
+                      cerrarModal('createCustomerModal');
+                      mostrarAlerta('Cliente creado exitosamente', 'success');
+                      document.getElementById('createCustomerForm').reset();
+                  } catch (error) {
+                      console.error('Error:', error);
+                      mostrarAlerta('Error al crear el cliente', 'error');
+                  }
+              }
+      
+              // Función para abrir el modal de edición
+              function abrirModalEditar(id) {
+                  const cliente = clientes.find(c => c._id === id);
+                  if (cliente) {
+                      document.getElementById('editCustomerId').value = cliente._id;
+                      document.getElementById('editCustomerName').value = cliente.nombre;
+                      document.getElementById('editCustomerEmail').value = cliente.correo;
+                      document.getElementById('editCustomerPhone').value = cliente.telefono;
+                      document.getElementById('editCustomerAddress').value = cliente.direccion;
+                      document.getElementById('editCustomerStatus').checked = cliente.estado === 'activo';
+                      
+                      const editCustomerModal = new bootstrap.Modal(document.getElementById('editCustomerModal'));
+                      editCustomerModal.show();
+                  }
+              }
+      
+              // Función para guardar los cambios de un cliente editado
+              async function guardarCambiosCliente(event) {
+                  event.preventDefault();
+                  const id = document.getElementById('editCustomerId').value;
+                  const nombre = document.getElementById('editCustomerName').value;
+                  const correo = document.getElementById('editCustomerEmail').value;
+                  const telefono = document.getElementById('editCustomerPhone').value;
+                  const direccion = document.getElementById('editCustomerAddress').value;
+                  const estado = document.getElementById('editCustomerStatus').checked ? 'activo' : 'inactivo';
+      
+                  if (!validarFormulario(nombre, correo, telefono, direccion)) {
+                      return;
+                  }
+      
+                  const clienteActualizado = { nombre, correo, telefono, direccion, estado };
+      
+                  try {
+                      const response = await fetch(`${API_URL}/${id}`, {
+                          method: 'PUT',
+                          headers: { 'Content-Type': 'application/json' },
+                          body: JSON.stringify(clienteActualizado),
+                      });
+      
+                      if (!response.ok) throw new Error('Error al actualizar el cliente');
+                      
+                      await cargarClientes();
+                      cerrarModal('editCustomerModal');
+                      mostrarAlerta('Cliente actualizado exitosamente', 'success');
+                  } catch (error) {
+                      console.error('Error:', error);
+                      mostrarAlerta('Error al actualizar el cliente', 'error');
+                  }
+              }
+      
+              // Función para eliminar un cliente
+              async function eliminarCliente(id) {
+                  const result = await Swal.fire({
+                      title: '¿Está seguro?',
+                      text: "Esta acción no se puede deshacer",
+                      icon: 'warning',
+                      showCancelButton: true,
+                      confirmButtonColor: '#3085d6',
+                      cancelButtonColor: '#d33',
+                      confirmButtonText: 'Sí, eliminar',
+                      cancelButtonText: 'Cancelar'
+                  });
+      
+                  if (result.isConfirmed) {
+                      try {
+                          const response = await fetch(`${API_URL}/${id}`, {
+                              method: 'DELETE',
+                          });
+      
+                          if (!response.ok) throw new Error('Error al eliminar el cliente');
+                          
+                          await cargarClientes();
+                          mostrarAlerta('Cliente eliminado exitosamente', 'success');
+                      } catch (error) {
+                          console.error('Error:', error);
+                          mostrarAlerta('Error al eliminar el cliente', 'error');
+                      }
+                  }
+              }
+      
+              // Función para ver detalles del cliente
+              function verDetalleCliente(id) {
+                  const cliente = clientes.find(c => c._id === id);
+                  if (cliente) {
+                      document.getElementById('viewCustomerName').textContent = cliente.nombre;
+                      document.getElementById('viewCustomerEmail').textContent = cliente.correo;
+                      document.getElementById('viewCustomerPhone').textContent = cliente.telefono;
+                      document.getElementById('viewCustomerAddress').textContent = cliente.direccion;
+                      document.getElementById('viewCustomerStatus').textContent = cliente.estado;
+      
+                      const viewCustomerModal = new bootstrap.Modal(document.getElementById('viewCustomerModal'));
+                      viewCustomerModal.show();
+                  }
+              }
+      
+              // Función para mostrar alertas usando SweetAlert2
+              function mostrarAlerta(mensaje, tipo) {
+                  Swal.fire({
+                      icon: tipo,
+                      title: tipo === 'success' ? 'Éxito' : 'Error',
+                      text: mensaje,
+                  });
+              }
+      
+              // Función para cerrar modales
+              function cerrarModal(modalId) {
+                  const modal = bootstrap.Modal.getInstance(document.getElementById(modalId));
+                  modal.hide();
+              }
+      
+              // Función para buscar clientes
+              function buscarClientes() {
+                  const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+                  const filteredClientes = clientes.filter(cliente => 
+                      cliente.nombre.toLowerCase().includes(searchTerm)
+                  );
+                  actualizarTabla(filteredClientes);
+              }
+      
+              // Event Listeners
+              document.getElementById('saveCreateCustomerButton').addEventListener('click', crearCliente);
+              document.getElementById('saveEditCustomerButton').addEventListener('click', guardarCambiosCliente);
+              document.getElementById('searchInput').addEventListener('input', buscarClientes);
+      
+              // Cargar clientes al iniciar la página
+              document.addEventListener('DOMContentLoaded', cargarClientes);
+          </script>
+      </body>
+      </html>

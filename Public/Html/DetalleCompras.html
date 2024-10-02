@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Teo/Cat</title>
+
+
+    <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.jpeg" />
+    <link rel="stylesheet" href="../assets/css/styles.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/themify-icons/0.1.2/css/themify-icons.min.css">
+    <link rel="stylesheet" href="../Css/GdeCategoria.css">
+</head>
+
+<body>
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed">
+        <!-- Sidebar Start -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div>
+                <div class="brand-logo d-flex align-items-center justify-content-between">
+                    <a href="./index.html" class="text-nowrap logo-img">
+                        <img src="../assets/images/logos/1.png" width="180" alt="" />
+                    </a>
+                    <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                        <i class="ti ti-x fs-8"></i>
+                    </div>
+                </div>
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+                    <ul id="sidebarnav">
+                        <li class="nav-small-cap">
+                            <i class="ti ti-menu-2 nav-small-cap-icon fs-4"></i>
+                            <span class="hide-menu">Menu Principal</span>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="index.html">
+                                <span>
+                                    <i class="ti ti-home"></i>
+                                </span>
+                                <span class="hide-menu">Inicio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr />
+                        </li>
+
+                        <!-- Dashboard -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="#dashboardSubmenu" data-bs-toggle="collapse"
+                                aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-dashboard"></i>
+                                </span>
+                                <span class="hide-menu">Dashboard</span>
+                            </a>
+                            <ul id="dashboardSubmenu" class="collapse first-level">
+                                <li class="sidebar-item">
+                                    <a href="GestionDesempeno.html" class="sidebar-link">
+                                        <i class="ti ti-chart-bar"></i>
+                                        <span class="hide-menu">Gestión De Desempeño</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <hr />
+                        </li>
+
+                        <!-- Configuración -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="#configSubmenu" data-bs-toggle="collapse"
+                                aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-settings"></i>
+                                </span>
+                                <span class="hide-menu">Configuración</span>
+                            </a>
+                            <ul id="configSubmenu" class="collapse first-level">
+                                <li class="sidebar-item">
+                                    <a href="GestiónDeRoles.html" class="sidebar-link">
+                                        <i class="ti ti-user-check"></i>
+                                        <span class="hide-menu">Gestión De Roles</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <hr />
+                        </li>
+
+                        <!-- Usuarios -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="#userSubmenu" data-bs-toggle="collapse"
+                                aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-users"></i>
+                                </span>
+                                <span class="hide-menu">Usuarios</span>
+                            </a>
+                            <ul id="userSubmenu" class="collapse first-level">
+                                <li class="sidebar-item">
+                                    <a href="GestiónDeUsuarios.html" class="sidebar-link">
+                                        <i class="ti ti-user-plus"></i>
+                                        <span class="hide-menu">Gestión De Usuarios</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="GestiónDeAcceso.html" class="sidebar-link">
+                                        <i class="ti ti-lock"></i>
+                                        <span class="hide-menu">Gestión De Acceso</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <hr />
+                        </li>
+
+                        <!-- Categorías -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="#categoriasSubmenu" data-bs-toggle="collapse"
+                                aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-category"></i>
+                                </span>
+                                <span class="hide-menu">Categorías</span>
+                            </a>
+                            <ul id="categoriasSubmenu" class="collapse first-level">
+                                <li class="sidebar-item">
+                                    <a href="CategoriasProductos.html" class="sidebar-link">
+                                        <i class="ti ti-box"></i>
+                                        <span class="hide-menu">Categorías De Productos</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <hr />
+                        </li>
+
+                        <!-- Compras -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="#comprasSubmenu" data-bs-toggle="collapse"
+                                aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-shopping-cart"></i>
+                                </span>
+                                <span class="hide-menu">Compras</span>
+                            </a>
+                            <ul id="comprasSubmenu" class="collapse first-level">
+                                <li class="sidebar-item">
+                                    <a href="GDeProductos.html" class="sidebar-link">
+                                        <i class="ti ti-package"></i>
+                                        <span class="hide-menu">Gestión De Productos</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="GDeProveedores.html" class="sidebar-link">
+                                        <i class="ti ti-truck-delivery"></i>
+                                        <span class="hide-menu">Gestión De Proveedores</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="GDeCompras.html" class="sidebar-link">
+                                        <i class="ti ti-receipt"></i>
+                                        <span class="hide-menu">Gestión De Compras</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <hr />
+                        </li>
+
+                        <!-- Ventas -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="#ventasSubmenu" data-bs-toggle="collapse"
+                                aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-cash"></i>
+                                </span>
+                                <span class="hide-menu">Ventas</span>
+                            </a>
+                            <ul id="ventasSubmenu" class="collapse first-level">
+                                <li class="sidebar-item">
+                                    <a href="GDeClientes.html" class="sidebar-link">
+                                        <i class="ti ti-user-circle"></i>
+                                        <span class="hide-menu">Gestión De Clientes</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="GDePedidos.html" class="sidebar-link">
+                                        <i class="ti ti-clipboard-list"></i>
+                                        <span class="hide-menu">Gestión De Pedidos</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="GDeVentas.html" class="sidebar-link">
+                                        <i class="ti ti-report-money"></i>
+                                        <span class="hide-menu">Gestión De Ventas</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="GDeDevoluciones2.html" class="sidebar-link">
+                                        <i class="ti ti-arrow-back-up"></i>
+                                        <span class="hide-menu">Devoluciones</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="GDeDevoluciones2.html" class="sidebar-link">
+                                        <i class="ti ti-exchange"></i>
+                                        <span class="hide-menu">Devoluciones2</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!--  Sidebar End -->
+        <!--  Main wrapper -->
+        <div class="body-wrapper">
+
+            <!--  Header Start -->
+            <header class="app-header">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <ul class="navbar-nav">
+                        <li class="nav-item d-block d-xl-none">
+                            <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse"
+                                href="javascript:void(0)">
+                                <i class="ti ti-menu-2"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                                <i class="ti ti-bell-ringing"></i>
+                                <div class="notification bg-primary rounded-circle"></div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+                        <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+
+                            <!-- Carrito de compras -->
+                            <li class="nav-item">
+                                <a class="nav-link nav-icon-hover" href="Carrito.html">
+                                    <i class="ti ti-shopping-cart"></i>
+                                </a>
+                            </li>
+
+                            <!-- Perfil de usuario -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35"
+                                        class="rounded-circle">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
+                                    aria-labelledby="drop2">
+                                    <div class="message-body">
+                                        <a href="MiPerfil.html" class="d-flex align-items-center gap-2 dropdown-item">
+                                            <i class="ti ti-user fs-6"></i>
+                                            <p class="mb-0 fs-3">Mi Perfil</p>
+                                        </a>
+                                        <a href="Login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Cerrar
+                                            Sesion</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!--  Header End -->
+
+            <div class="container-fluid"></div>
+    <div class="container mt-4">
+        <h1 class="mb-4">Detalles de Compras</h1>
+        <button id="btnCrear" class="btn btn-primary mb-3">Crear Nuevo Detalle</button>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Compra ID</th>
+                    <th>Producto ID</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Total</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaDetalles">
+                <!-- Los detalles se insertarán aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal para crear/editar detalles -->
+    <div class="modal fade" id="detalleModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Crear/Editar Detalle</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="detalleForm">
+                        <input type="hidden" id="detalleId">
+                        <div class="mb-3">
+                            <label for="compraId" class="form-label">Compra</label>
+                            <select class="form-select" id="compraId" required>
+                                <!-- Las opciones se cargarán dinámicamente -->
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productoId" class="form-label">Producto</label>
+                            <select class="form-select" id="productoId" required>
+                                <!-- Las opciones se cargarán dinámicamente -->
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cantidad" class="form-label">Cantidad</label>
+                            <input type="number" class="form-control" id="cantidad" required min="1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="precio" class="form-label">Precio</label>
+                            <input type="number" step="0.01" class="form-control" id="precio" required min="0">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>
+        // Configuración de Axios
+        axios.defaults.baseURL = 'https://chavo-del-8.onrender.com/Api';
+
+        // Elementos del DOM
+        const tablaDetalles = document.getElementById('tablaDetalles');
+        const btnCrear = document.getElementById('btnCrear');
+        const detalleModal = new bootstrap.Modal(document.getElementById('detalleModal'));
+        const detalleForm = document.getElementById('detalleForm');
+        const btnGuardar = document.getElementById('btnGuardar');
+        const selectCompra = document.getElementById('compraId');
+        const selectProducto = document.getElementById('productoId');
+
+        // Cargar detalles al iniciar
+        document.addEventListener('DOMContentLoaded', () => {
+            cargarDetalles();
+            cargarCompras();
+            cargarProductos();
+        });
+
+        // Event listeners
+        btnCrear.addEventListener('click', () => abrirModal());
+        btnGuardar.addEventListener('click', guardarDetalle);
+
+        // Función para cargar los detalles
+        async function cargarDetalles() {
+            try {
+                const response = await axios.get('/DetalleCompra');
+                const detalles = response.data;
+                tablaDetalles.innerHTML = '';
+                detalles.forEach(detalle => {
+                    const row = tablaDetalles.insertRow();
+                    row.innerHTML = `
+                        <td>${detalle.compraId?.nombre || detalle.compraId || 'N/A'}</td>
+                        <td>${detalle.productoId?.nombre || detalle.productoId || 'N/A'}</td>
+                        <td>${detalle.cantidad}</td>
+                        <td>$${detalle.precio.toFixed(2)}</td>
+                        <td>$${detalle.total.toFixed(2)}</td>
+                        <td>${new Date(detalle.fecha).toLocaleString()}</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" onclick="editarDetalle('${detalle._id}')">Editar</button>
+                            <button class="btn btn-sm btn-danger" onclick="eliminarDetalle('${detalle._id}')">Eliminar</button>
+                        </td>
+                    `;
+                });
+            } catch (error) {
+                console.error('Error al cargar detalles:', error);
+                mostrarNotificacion('Error al cargar los detalles: ' + obtenerMensajeError(error), 'error');
+            }
+        }
+
+        // Función para cargar las compras
+        async function cargarCompras() {
+            try {
+                const response = await axios.get('/Compras');
+                const compras = response.data;
+                selectCompra.innerHTML = '<option value="">Seleccione una compra</option>';
+                compras.forEach(compra => {
+                    selectCompra.innerHTML += `<option value="${compra._id}">${compra.nombre || compra._id}</option>`;
+                });
+            } catch (error) {
+                console.error('Error al cargar compras:', error);
+                mostrarNotificacion('Error al cargar las compras', 'error');
+            }
+        }
+
+        // Función para cargar los productos
+        async function cargarProductos() {
+            try {
+                const response = await axios.get('/Producto');
+                const productos = response.data;
+                selectProducto.innerHTML = '<option value="">Seleccione un producto</option>';
+                productos.forEach(producto => {
+                    selectProducto.innerHTML += `<option value="${producto._id}">${producto.nombre || producto._id}</option>`;
+                });
+            } catch (error) {
+                console.error('Error al cargar productos:', error);
+                mostrarNotificacion('Error al cargar los productos', 'error');
+            }
+        }
+
+        // Función para abrir el modal (crear o editar)
+        function abrirModal(detalle = null) {
+            detalleForm.reset();
+            if (detalle) {
+                document.getElementById('detalleId').value = detalle._id;
+                document.getElementById('compraId').value = detalle.compraId?._id || detalle.compraId;
+                document.getElementById('productoId').value = detalle.productoId?._id || detalle.productoId;
+                document.getElementById('cantidad').value = detalle.cantidad;
+                document.getElementById('precio').value = detalle.precio;
+                document.getElementById('modalTitle').textContent = 'Editar Detalle';
+            } else {
+                document.getElementById('detalleId').value = '';
+                document.getElementById('modalTitle').textContent = 'Crear Detalle';
+            }
+            detalleModal.show();
+        }
+
+        // Función para guardar o actualizar un detalle
+        async function guardarDetalle() {
+            const detalleId = document.getElementById('detalleId').value;
+            const detalle = {
+                compraId: document.getElementById('compraId').value,
+                productoId: document.getElementById('productoId').value,
+                cantidad: parseInt(document.getElementById('cantidad').value),
+                precio: parseFloat(document.getElementById('precio').value)
+            };
+
+            // Validaciones
+            if (!detalle.compraId || !detalle.productoId || detalle.cantidad < 1 || detalle.precio < 0) {
+                mostrarNotificacion('Por favor, complete todos los campos correctamente.', 'error');
+                return;
+            }
+
+            try {
+                let response;
+                if (detalleId) {
+                    console.log('Actualizando detalle:', detalleId, detalle);
+                    response = await axios.put(`/DetalleCompra/${detalleId}`, detalle);
+                    mostrarNotificacion('Detalle actualizado con éxito');
+                } else {
+                    console.log('Creando nuevo detalle:', detalle);
+                    response = await axios.post('/DetalleCompra', detalle);
+                    mostrarNotificacion('Detalle creado con éxito');
+                }
+                console.log('Respuesta del servidor:', response.data);
+                detalleModal.hide();
+                cargarDetalles();
+            } catch (error) {
+                console.error('Error al guardar detalle:', error);
+                mostrarNotificacion('Error al guardar el detalle: ' + obtenerMensajeError(error), 'error');
+            }
+        }
+
+        // Función para editar un detalle
+        async function editarDetalle(id) {
+            try {
+                const response = await axios.get(`/DetalleCompra/${id}`);
+                abrirModal(response.data);
+            } catch (error) {
+                console.error('Error al cargar detalle para editar:', error);
+                mostrarNotificacion('Error al cargar el detalle: ' + obtenerMensajeError(error), 'error');
+            }
+        }
+
+        // Función para eliminar un detalle
+        async function eliminarDetalle(id) {
+            if (confirm('¿Estás seguro de que quieres eliminar este detalle?')) {
+                try {
+                    await axios.delete(`/DetalleCompra/${id}`);
+                    mostrarNotificacion('Detalle eliminado con éxito');
+                    cargarDetalles();
+                } catch (error) {
+                    console.error('Error al eliminar detalle:', error);
+                    mostrarNotificacion('Error al eliminar el detalle: ' + obtenerMensajeError(error), 'error');
+                }
+            }
+        }
+
+        // Función para mostrar notificaciones
+        function mostrarNotificacion(mensaje, tipo = 'success') {
+            Toastify({
+                text: mensaje,
+                duration: 3000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                style: {
+                    background: tipo === 'success' ? "linear-gradient(to right, #00b09b, #96c93d)" : "linear-gradient(to right, #ff5f6d, #ffc371)",
+                }
+            }).showToast();
+        }
+
+        // Función para obtener mensaje de error
+        function obtenerMensajeError(error) {
+            return error.response && error.response.data
+                ? error.response.data.mensaje || error.response.data.error
+                : error.message;
+        }
+    </script>
+</body>
+</html>

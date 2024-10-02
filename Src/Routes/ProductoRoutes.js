@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const productoController = require('../Controllers/ProductoController'); // Asegúrate de que esta ruta sea correcta
 
+
 // Ruta para crear un nuevo producto
 router.post('/', productoController.crearProducto);
 

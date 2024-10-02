@@ -19,9 +19,8 @@ const usuarioSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
-    minlength: 8  // Por ejemplo, al menos 6 caracteres
+    minlength: 8  // Al menos 8 caracteres
   },
-  
   status: {
     type: String,
     enum: ['activo', 'inactivo'],
