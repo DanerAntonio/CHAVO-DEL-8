@@ -1,12 +1,17 @@
 const mongoose = require('mongoose');
 
 const comprasSchema = new mongoose.Schema({
-    numeroCompra: { type: String, required: true, unique: true }, // Campo único
-    numeroFactura: { type: String, required: true, unique: true }, // Campo único
-    proveedor: { type: String, required: true },
-    montoTotal: { type: Number, required: true, min: 0 }, // Asegúrate de que sea no negativo
+    numeroCompra: { type: String, required: true, unique: true },
+    numeroFactura: { type: String, required: true, unique: true },
+    proveedor: { type: mongoose.Schema.Types.ObjectId, ref: 'Proveedor', required: true },
+    clienteId: { type: mongoose.Schema.Types.ObjectId, ref: 'Cliente', required: true }, // Cambiado a 'Cliente'
+    montoTotal: { type: Number, required: true, min: 0 },
     fechaCompra: { type: Date, default: Date.now },
-    clientId: { type: mongoose.Schema.Types.ObjectId, ref: 'Client' } // Asumiendo que tienes una colección de clientes
+    productos: [{
+        productoId: { type: mongoose.Schema.Types.ObjectId, ref: 'Producto' },
+        cantidad: Number,
+        precioUnitario: Number
+    }]
 });
 
 module.exports = mongoose.model('Compras', comprasSchema);

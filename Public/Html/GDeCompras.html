@@ -1,428 +1,124 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Teo/Cat</title>
-
-
-    <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.jpeg" />
-    <link rel="stylesheet" href="../assets/css/styles.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/themify-icons/0.1.2/css/themify-icons.min.css">
-    <link rel="stylesheet" href="../Css/GdeCategoria.css">
-</head>
-
-<body>
-    <!--  Body Wrapper -->
-    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-        data-sidebar-position="fixed" data-header-position="fixed">
-        <!-- Sidebar Start -->
-        <aside class="left-sidebar">
-            <!-- Sidebar scroll-->
-            <div>
-                <div class="brand-logo d-flex align-items-center justify-content-between">
-                    <a href="./index.html" class="text-nowrap logo-img">
-                        <img src="../assets/images/logos/1.png" width="180" alt="" />
-                    </a>
-                    <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
-                        <i class="ti ti-x fs-8"></i>
-                    </div>
-                </div>
-                <!-- Sidebar navigation-->
-                <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
-                    <ul id="sidebarnav">
-                        <li class="nav-small-cap">
-                            <i class="ti ti-menu-2 nav-small-cap-icon fs-4"></i>
-                            <span class="hide-menu">Menu Principal</span>
-                        </li>
-
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="index.html">
-                                <span>
-                                    <i class="ti ti-home"></i>
-                                </span>
-                                <span class="hide-menu">Inicio</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr />
-                        </li>
-
-                        <!-- Dashboard -->
-                        <li class="sidebar-item">
-                            <a class="sidebar-link has-arrow" href="#dashboardSubmenu" data-bs-toggle="collapse"
-                                aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-dashboard"></i>
-                                </span>
-                                <span class="hide-menu">Dashboard</span>
-                            </a>
-                            <ul id="dashboardSubmenu" class="collapse first-level">
-                                <li class="sidebar-item">
-                                    <a href="GestionDesempeno.html" class="sidebar-link">
-                                        <i class="ti ti-chart-bar"></i>
-                                        <span class="hide-menu">Gestión De Desempeño</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <hr />
-                        </li>
-
-                        <!-- Configuración -->
-                        <li class="sidebar-item">
-                            <a class="sidebar-link has-arrow" href="#configSubmenu" data-bs-toggle="collapse"
-                                aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-settings"></i>
-                                </span>
-                                <span class="hide-menu">Configuración</span>
-                            </a>
-                            <ul id="configSubmenu" class="collapse first-level">
-                                <li class="sidebar-item">
-                                    <a href="GestiónDeRoles.html" class="sidebar-link">
-                                        <i class="ti ti-user-check"></i>
-                                        <span class="hide-menu">Gestión De Roles</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <hr />
-                        </li>
-
-                        <!-- Usuarios -->
-                        <li class="sidebar-item">
-                            <a class="sidebar-link has-arrow" href="#userSubmenu" data-bs-toggle="collapse"
-                                aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-users"></i>
-                                </span>
-                                <span class="hide-menu">Usuarios</span>
-                            </a>
-                            <ul id="userSubmenu" class="collapse first-level">
-                                <li class="sidebar-item">
-                                    <a href="GestiónDeUsuarios.html" class="sidebar-link">
-                                        <i class="ti ti-user-plus"></i>
-                                        <span class="hide-menu">Gestión De Usuarios</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="GestiónDeAcceso.html" class="sidebar-link">
-                                        <i class="ti ti-lock"></i>
-                                        <span class="hide-menu">Gestión De Acceso</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <hr />
-                        </li>
-
-                        <!-- Categorías -->
-                        <li class="sidebar-item">
-                            <a class="sidebar-link has-arrow" href="#categoriasSubmenu" data-bs-toggle="collapse"
-                                aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-category"></i>
-                                </span>
-                                <span class="hide-menu">Categorías</span>
-                            </a>
-                            <ul id="categoriasSubmenu" class="collapse first-level">
-                                <li class="sidebar-item">
-                                    <a href="CategoriasProductos.html" class="sidebar-link">
-                                        <i class="ti ti-box"></i>
-                                        <span class="hide-menu">Categorías De Productos</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <hr />
-                        </li>
-
-                        <!-- Compras -->
-                        <li class="sidebar-item">
-                            <a class="sidebar-link has-arrow" href="#comprasSubmenu" data-bs-toggle="collapse"
-                                aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-shopping-cart"></i>
-                                </span>
-                                <span class="hide-menu">Compras</span>
-                            </a>
-                            <ul id="comprasSubmenu" class="collapse first-level">
-                                <li class="sidebar-item">
-                                    <a href="GDeProductos.html" class="sidebar-link">
-                                        <i class="ti ti-package"></i>
-                                        <span class="hide-menu">Gestión De Productos</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="GDeProveedores.html" class="sidebar-link">
-                                        <i class="ti ti-truck-delivery"></i>
-                                        <span class="hide-menu">Gestión De Proveedores</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="GDeCompras.html" class="sidebar-link">
-                                        <i class="ti ti-receipt"></i>
-                                        <span class="hide-menu">Gestión De Compras</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <hr />
-                        </li>
-
-                        <!-- Ventas -->
-                        <li class="sidebar-item">
-                            <a class="sidebar-link has-arrow" href="#ventasSubmenu" data-bs-toggle="collapse"
-                                aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-cash"></i>
-                                </span>
-                                <span class="hide-menu">Ventas</span>
-                            </a>
-                            <ul id="ventasSubmenu" class="collapse first-level">
-                                <li class="sidebar-item">
-                                    <a href="GDeClientes.html" class="sidebar-link">
-                                        <i class="ti ti-user-circle"></i>
-                                        <span class="hide-menu">Gestión De Clientes</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="GDePedidos.html" class="sidebar-link">
-                                        <i class="ti ti-clipboard-list"></i>
-                                        <span class="hide-menu">Gestión De Pedidos</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="GDeVentas.html" class="sidebar-link">
-                                        <i class="ti ti-report-money"></i>
-                                        <span class="hide-menu">Gestión De Ventas</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="GDeDevoluciones2.html" class="sidebar-link">
-                                        <i class="ti ti-arrow-back-up"></i>
-                                        <span class="hide-menu">Devoluciones</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="GDeDevoluciones2.html" class="sidebar-link">
-                                        <i class="ti ti-exchange"></i>
-                                        <span class="hide-menu">Devoluciones2</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- End Sidebar navigation -->
-            </div>
-            <!-- End Sidebar scroll-->
-        </aside>
-        <!--  Sidebar End -->
-        <!--  Main wrapper -->
-        <div class="body-wrapper">
-
-            <!--  Header Start -->
-            <header class="app-header">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <ul class="navbar-nav">
-                        <li class="nav-item d-block d-xl-none">
-                            <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse"
-                                href="javascript:void(0)">
-                                <i class="ti ti-menu-2"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-icon-hover" href="javascript:void(0)">
-                                <i class="ti ti-bell-ringing"></i>
-                                <div class="notification bg-primary rounded-circle"></div>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
-                        <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-
-                            <!-- Carrito de compras -->
-                            <li class="nav-item">
-                                <a class="nav-link nav-icon-hover" href="Carrito.html">
-                                    <i class="ti ti-shopping-cart"></i>
-                                </a>
-                            </li>
-
-                            <!-- Perfil de usuario -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35"
-                                        class="rounded-circle">
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
-                                    aria-labelledby="drop2">
-                                    <div class="message-body">
-                                        <a href="MiPerfil.html" class="d-flex align-items-center gap-2 dropdown-item">
-                                            <i class="ti ti-user fs-6"></i>
-                                            <p class="mb-0 fs-3">Mi Perfil</p>
-                                        </a>
-                                        <a href="Login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Cerrar
-                                            Sesion</a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-            <!--  Header End -->
-
-            <div class="container-fluid"></div>
-            <style>
-                .table-responsive {
-                    max-height: 400px;
-                    overflow-y: auto;
-                }
-                @media (max-width: 768px) {
-                    .table-responsive {
-                        font-size: 0.8rem;
-                    }
-                }
-            </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Compras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+        .table-responsive {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
         <h1 class="mb-4">Gestión de Compras</h1>
         <div class="row mb-3">
             <div class="col-md-6">
-                <input type="text" id="searchInput" class="form-control" placeholder="Buscar compra por número o proveedor...">
+                <input type="text" id="searchInput" class="form-control" placeholder="Buscar por número de compra, factura, proveedor o cliente...">
             </div>
-            <div class="col-md-6">
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createPurchaseModal">
+            <div class="col-md-6 text-end">
+                <button class="btn btn-primary" onclick="abrirModalCrearCompra()">
                     Crear Compra
+                </button>
+                <button class="btn btn-success" id="downloadExcelBtn">
+                    Descargar Excel
                 </button>
             </div>
         </div>
-        <div class="table-container">
+        <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Número de Compra</th>
                         <th>Número de Factura</th>
                         <th>Proveedor</th>
+                        <th>Cliente</th>
                         <th>Monto Total</th>
                         <th>Fecha de Compra</th>
-                        <th>Nombre del Cliente</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody id="purchaseTableBody"></tbody>
             </table>
         </div>
+        <nav aria-label="Paginación de compras">
+            <ul class="pagination justify-content-center" id="pagination"></ul>
+        </nav>
     </div>
 
-    <!-- Modal para Crear Compra -->
-    <div class="modal fade" id="createPurchaseModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
+    <!-- Modal para Crear/Editar Compra -->
+    <div class="modal fade" id="purchaseModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Crear Compra</h5>
+                    <h5 class="modal-title" id="purchaseModalTitle">Crear Compra</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="createPurchaseForm">
-                        <div class="mb-3">
-                            <label for="createPurchaseNumber" class="form-label">Número de Compra</label>
-                            <input type="text" class="form-control" id="createPurchaseNumber" required>
+                    <form id="purchaseForm">
+                        <input type="hidden" id="purchaseId">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="purchaseNumber" class="form-label">Número de Compra</label>
+                                <input type="text" class="form-control" id="purchaseNumber" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="invoiceNumber" class="form-label">Número de Factura</label>
+                                <input type="text" class="form-control" id="invoiceNumber" required>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="createInvoiceNumber" class="form-label">Número de Factura</label>
-                            <input type="text" class="form-control" id="createInvoiceNumber" required>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="purchaseProvider" class="form-label">Proveedor</label>
+                                <select class="form-select" id="purchaseProvider" required>
+                                    <option value="">Seleccione un proveedor</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="clientName" class="form-label">Cliente</label>
+                                <select class="form-select" id="clientName" required>
+                                    <option value="">Seleccione un cliente</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="createPurchaseProvider" class="form-label">Proveedor</label>
-                            <select class="form-select" id="createPurchaseProvider" required>
-                                <option value="">Seleccione un proveedor</option>
-                            </select>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="purchaseDate" class="form-label">Fecha de Compra</label>
+                                <input type="date" class="form-control" id="purchaseDate" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="purchaseTotal" class="form-label">Monto Total</label>
+                                <input type="number" class="form-control" id="purchaseTotal" required min="0" step="0.01">
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <button type="button" class="btn btn-secondary" id="createNewProviderBtn">Crear Nuevo Proveedor</button>
-                        </div>
-                        <div class="mb-3">
-                            <label for="createPurchaseTotal" class="form-label">Monto Total</label>
-                            <input type="number" class="form-control" id="createPurchaseTotal" required min="0" step="0.01">
-                        </div>
-                        <div class="mb-3">
-                            <label for="createPurchaseDate" class="form-label">Fecha de Compra</label>
-                            <input type="date" class="form-control" id="createPurchaseDate" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="createClientName" class="form-label">Nombre del Cliente</label>
-                            <select class="form-select" id="createClientName" required>
-                                <option value="">Seleccione un cliente</option>
-                            </select>
+                        <h5 class="mt-4">Productos</h5>
+                        <div id="productList" class="mb-3"></div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <select class="form-select" id="productSelect">
+                                    <option value="">Seleccione un producto</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <input type="number" class="form-control" id="productQuantity" placeholder="Cantidad" min="1">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" id="productPrice" placeholder="Precio" min="0" step="0.01">
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-success" id="addProductBtn">Agregar Producto</button>
+                            </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="saveCreatePurchaseButton">Guardar Compra</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal para Editar Compra -->
-    <div class="modal fade" id="editPurchaseModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Editar Compra</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="editPurchaseForm">
-                        <input type="hidden" id="editPurchaseId">
-                        <div class="mb-3">
-                            <label for="editPurchaseNumber" class="form-label">Número de Compra</label>
-                            <input type="text" class="form-control" id="editPurchaseNumber" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="editInvoiceNumber" class="form-label">Número de Factura</label>
-                            <input type="text" class="form-control" id="editInvoiceNumber" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="editPurchaseProvider" class="form-label">Proveedor</label>
-                            <select class="form-select" id="editPurchaseProvider" required>
-                                <option value="">Seleccione un proveedor</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <button type="button" class="btn btn-secondary" id="editNewProviderBtn">Crear Nuevo Proveedor</button>
-                        </div>
-                        <div class="mb-3">
-                            <label for="editPurchaseTotal" class="form-label">Monto Total</label>
-                            <input type="number" class="form-control" id="editPurchaseTotal" required min="0" step="0.01">
-                        </div>
-                        <div class="mb-3">
-                            <label for="editPurchaseDate" class="form-label">Fecha de Compra</label>
-                            <input type="date" class="form-control" id="editPurchaseDate" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="editClientName" class="form-label">Nombre del Cliente</label>
-                            <select class="form-select" id="editClientName" required>
-                                <option value="">Seleccione un cliente</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="saveEditPurchaseButton">Guardar Cambios</button>
+                    <button type="button" class="btn btn-primary" id="savePurchaseButton">Guardar Compra</button>
                 </div>
             </div>
         </div>
@@ -437,7 +133,6 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h6>Información de la Compra</h6>
                     <dl class="row">
                         <dt class="col-sm-3">Número de Compra:</dt>
                         <dd class="col-sm-9" id="viewPurchaseNumber"></dd>
@@ -445,14 +140,14 @@
                         <dd class="col-sm-9" id="viewInvoiceNumber"></dd>
                         <dt class="col-sm-3">Proveedor:</dt>
                         <dd class="col-sm-9" id="viewPurchaseProvider"></dd>
+                        <dt class="col-sm-3">Cliente:</dt>
+                        <dd class="col-sm-9" id="viewClientName"></dd>
                         <dt class="col-sm-3">Monto Total:</dt>
                         <dd class="col-sm-9" id="viewPurchaseTotal"></dd>
                         <dt class="col-sm-3">Fecha de Compra:</dt>
                         <dd class="col-sm-9" id="viewPurchaseDate"></dd>
-                        <dt class="col-sm-3">Nombre del Cliente:</dt>
-                        <dd class="col-sm-9" id="viewClientName"></dd>
                     </dl>
-                    <h6 class="mt-4">Detalles de la Compra</h6>
+                    <h6 class="mt-4">Productos</h6>
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -462,7 +157,7 @@
                                 <th>Subtotal</th>
                             </tr>
                         </thead>
-                        <tbody id="viewPurchaseDetails"></tbody>
+                        <tbody id="viewProductList"></tbody>
                     </table>
                 </div>
                 <div class="modal-footer">
@@ -472,492 +167,9 @@
         </div>
     </div>
 
-    <!-- Modal para Crear Nuevo Proveedor -->
-    <div class="modal fade" id="createProviderModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Crear Nuevo Proveedor</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="createProviderForm">
-                        <div class="mb-3">
-                            <label for="newProviderCompanyName" class="form-label">Nombre de la Compañía</label>
-                            <input type="text" class="form-control" id="newProviderCompanyName" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="newProviderContactPerson" class="form-label">Persona de Contacto</label>
-                            <input type="text" class="form-control" id="newProviderContactPerson" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="newProviderEmail" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="newProviderEmail" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="newProviderPhone" class="form-label">Teléfono</label>
-                            <input type="tel" class="form-control" id="newProviderPhone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="newProviderAddress1" class="form-label">Dirección 1</label>
-                            <input type="text" class="form-control" id="newProviderAddress1" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="newProviderAddress2" class="form-label">Dirección 2</label>
-                            <input type="text" class="form-control" id="newProviderAddress2">
-                        </div>
-                        <div class="mb-3">
-                            <label for="newProviderCity" class="form-label">Ciudad</label>
-                            <input type="text" class="form-control" id="newProviderCity" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="newProviderState" class="form-label">Estado</label>
-                            <input type="text" class="form-control" id="newProviderState" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="newProviderZipCode" class="form-label">Código Postal</label>
-                            <input type="text" class="form-control" id="newProviderZipCode" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="newProviderNIT" class="form-label">NIT</label>
-                            <input type="text" class="form-control" id="newProviderNIT" required>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="saveNewProviderButton">Guardar Proveedor</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
-    <script>
-        // URLs de las APIs
-        const API_URL = 'https://chavo-del-8.onrender.com/Api/Compras';
-        const PROVEEDOR_API_URL = 'https://chavo-del-8.onrender.com/Api/Proveedor';
-        const CLIENTE_API_URL = 'https://chavo-del-8.onrender.com/Api/Cliente';
-        const DETALLE_COMPRA_API_URL = 'https://chavo-del-8.onrender.com/Api/DetalleCompra';
-
-        // Arrays para almacenar datos
-        let compras = [];
-        let proveedores = [];
-        let clientes = [];
-
-        // Función para cargar las compras desde la API
-        async function cargarCompras() {
-            try {
-                const response = await fetch(API_URL);
-                if (!response.ok) {
-                    throw new Error('Error al cargar las compras');
-                }
-                compras = await response.json();
-                actualizarTabla();
-            } catch (error) {
-                console.error('Error:', error);
-                mostrarAlerta(`Error al cargar las compras: ${error.message}`, 'error');
-            }
-        }
-
-        // Función para cargar los proveedores
-        async function cargarProveedores() {
-            try {
-                const response = await fetch(PROVEEDOR_API_URL);
-                if (!response.ok) {
-                    throw new Error('Error al cargar los proveedores');
-                }
-                const data = await response.json();
-                if (Array.isArray(data)) {
-                    proveedores = data;
-                    actualizarSelectProveedores();
-                } else {
-                    console.error('Los datos de proveedores no son un array:', data);
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                mostrarAlerta(`Error al cargar los proveedores: ${error.message}`, 'error');
-            }
-        }
-
-        // Función para cargar los clientes
-        async function cargarClientes() {
-            try {
-                const response = await fetch(CLIENTE_API_URL);
-                if (!response.ok) {
-                    throw new Error('Error al cargar los clientes');
-                }
-                clientes = await response.json();
-                actualizarSelectClientes();
-            } catch (error) {
-                console.error('Error:', error);
-                mostrarAlerta(`Error al cargar los clientes: ${error.message}`, 'error');
-            }
-        }
-
-        // Función para actualizar los selects de proveedores
-        function actualizarSelectProveedores() {
-            const createSelect = document.getElementById('createPurchaseProvider');
-            const editSelect = document.getElementById('editPurchaseProvider');
-            
-            if (!createSelect || !editSelect) {
-                console.error('No se encontraron los elementos select de proveedores');
-                return;
-            }
-
-            [createSelect, editSelect].forEach(select => {
-                select.innerHTML = '<option value="">Seleccione un proveedor</option>';
-                if (Array.isArray(proveedores) && proveedores.length > 0) {
-                    proveedores.forEach(proveedor => {
-                        const option = document.createElement('option');
-                        option.value = proveedor._id;
-                        option.textContent = proveedor.nombre_compania;
-                        select.appendChild(option);
-                    });
-                } else {
-                    console.warn('No hay proveedores disponibles');
-                }
-            });
-        }
-
-        // Función para actualizar los selects de clientes
-        function actualizarSelectClientes() {
-            const createSelect = document.getElementById('createClientName');
-            const editSelect = document.getElementById('editClientName');
-            
-            if (!createSelect || !editSelect) {
-                console.error('No se encontraron los elementos select de clientes');
-                return;
-            }
-
-            [createSelect, editSelect].forEach(select => {
-                select.innerHTML = '<option value="">Seleccione un cliente</option>';
-                if (Array.isArray(clientes) && clientes.length > 0) {
-                    clientes.forEach(cliente => {
-                        const option = document.createElement('option');
-                        option.value = cliente._id;
-                        option.textContent = cliente.nombre;
-                        select.appendChild(option);
-                    });
-                } else {
-                    console.warn('No hay clientes disponibles');
-                }
-            });
-        }
-
-        // Función para actualizar la tabla de compras
-        function actualizarTabla(filteredCompras = compras) {
-            const tableBody = document.getElementById('purchaseTableBody');
-            tableBody.innerHTML = '';
-
-            filteredCompras.forEach(compra => {
-                const proveedor = proveedores.find(p => p._id === compra.proveedor);
-                const cliente = clientes.find(c => c._id === compra.clientId);
-                const row = `
-                    <tr>
-                        <td>${compra.numeroCompra || 'N/A'}</td>
-                        <td>${compra.numeroFactura || 'N/A'}</td>
-                        <td>${proveedor ? proveedor.nombre_compania : 'N/A'}</td>
-                        <td>${typeof compra.montoTotal === 'number' ? '$' + compra.montoTotal.toFixed(2) : 'N/A'}</td>
-                        <td>${compra.fechaCompra ? new Date(compra.fechaCompra).toLocaleDateString() : 'N/A'}</td>
-                        <td>${cliente ? cliente.nombre : 'N/A'}</td>
-                        <td>
-                            <button class="btn btn-info btn-sm me-1" onclick="verDetalleCompra('${compra._id}')">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                            <button class="btn btn-primary btn-sm me-1" onclick="abrirModalEditar('${compra._id}')">
-                                <i class="bi bi-pencil"></i>
-                            </button>
-                            <button class="btn btn-danger btn-sm" onclick="anularCompra('${compra._id}')">
-                                <i class="bi bi-x-circle"></i>
-                            </button>
-                        </td>
-                    </tr>
-                `;
-                tableBody.innerHTML += row;
-            });
-        }
-
-        // Función para validar el formulario
-        function validarFormulario(numeroCompra, numeroFactura, proveedor, montoTotal, fechaCompra, clientId) {
-            if (!numeroCompra || !numeroFactura || !proveedor || !montoTotal || !fechaCompra || !clientId) {
-                mostrarAlerta('Por favor, complete todos los campos requeridos.', 'error');
-                return false;
-            }
-            if (montoTotal < 0) {
-                mostrarAlerta('El monto total no puede ser negativo.', 'error');
-                return false;
-            }
-            return true;
-        }
-
-        // Función para crear una compra
-        async function crearCompra(event) {
-            event.preventDefault();
-            const numeroCompra = document.getElementById('createPurchaseNumber').value;
-            const numeroFactura = document.getElementById('createInvoiceNumber').value;
-            const proveedor = document.getElementById('createPurchaseProvider').value;
-            const montoTotal = parseFloat(document.getElementById('createPurchaseTotal').value);
-            const fechaCompra = document.getElementById('createPurchaseDate').value;
-            const clientId = document.getElementById('createClientName').value;
-
-            if (!validarFormulario(numeroCompra, numeroFactura, proveedor, montoTotal, fechaCompra, clientId)) {
-                return;
-            }
-
-            const nuevaCompra = { 
-                numeroCompra,
-                numeroFactura,
-                proveedor, 
-                montoTotal: isNaN(montoTotal) ? 0 : montoTotal, 
-                fechaCompra,
-                clientId
-            };
-
-            try {
-                const response = await fetch(API_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(nuevaCompra),
-                });
-
-                if (!response.ok) throw new Error('Error al crear la compra');
-                
-                await cargarCompras();
-                cerrarModal('createPurchaseModal');
-                mostrarAlerta('Compra creada exitosamente', 'success');
-                document.getElementById('createPurchaseForm').reset();
-            } catch (error) {
-                console.error('Error:', error);
-                mostrarAlerta('Error al crear la compra', 'error');
-            }
-        }
-
-        // Función para abrir el modal de edición
-        function abrirModalEditar(id) {
-            const compra = compras.find(c => c._id === id);
-            if (compra) {
-                document.getElementById('editPurchaseId').value = compra._id;
-                document.getElementById('editPurchaseNumber').value = compra.numeroCompra || '';
-                document.getElementById('editInvoiceNumber').value = compra.numeroFactura || '';
-                document.getElementById('editPurchaseProvider').value = compra.proveedor || '';
-                document.getElementById('editPurchaseTotal').value = compra.montoTotal || 0;
-                document.getElementById('editPurchaseDate').value = compra.fechaCompra ? new Date(compra.fechaCompra).toISOString().split('T')[0] : '';
-                document.getElementById('editClientName').value = compra.clientId || '';
-                
-                const editPurchaseModal = new bootstrap.Modal(document.getElementById('editPurchaseModal'));
-                editPurchaseModal.show();
-            }
-        }
-
-        // Función para guardar los cambios de una compra editada
-        async function guardarCambiosCompra(event) {
-            event.preventDefault();
-            const id = document.getElementById('editPurchaseId').value;
-            const numeroCompra = document.getElementById('editPurchaseNumber').value;
-            const numeroFactura = document.getElementById('editInvoiceNumber').value;
-            const proveedor = document.getElementById('editPurchaseProvider').value;
-            const montoTotal = parseFloat(document.getElementById('editPurchaseTotal').value);
-            const fechaCompra = document.getElementById('editPurchaseDate').value;
-            const clientId = document.getElementById('editClientName').value;
-
-            if (!validarFormulario(numeroCompra, numeroFactura, proveedor, montoTotal, fechaCompra, clientId)) {
-                return;
-            }
-
-            const compraActualizada = { 
-                numeroCompra,
-                numeroFactura,
-                proveedor, 
-                montoTotal: isNaN(montoTotal) ? 0 : montoTotal, 
-                fechaCompra,
-                clientId
-            };
-
-            try {
-                const response = await fetch(`${API_URL}/${id}`, {
-                    method: 'PUT',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(compraActualizada),
-                });
-
-                if (!response.ok) throw new Error('Error al actualizar la compra');
-                
-                await cargarCompras();
-                cerrarModal('editPurchaseModal');
-                mostrarAlerta('Compra actualizada exitosamente', 'success');
-            } catch (error) {
-                console.error('Error:', error);
-                mostrarAlerta('Error al actualizar la compra', 'error');
-            }
-        }
-
-        // Función para anular una compra
-        async function anularCompra(id) {
-            const result = await Swal.fire({
-                title: '¿Está seguro?',
-                text: "Esta acción anulará la compra",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Sí, anular',
-                cancelButtonText: 'Cancelar'
-            });
-
-            if (result.isConfirmed) {
-                try {
-                    const response = await fetch(`${API_URL}/${id}`, {
-                        method: 'DELETE',
-                        headers: { 'Content-Type': 'application/json' },
-                    });
-
-                    if (!response.ok) throw new Error('Error al anular la compra');
-                    
-                    await cargarCompras();
-                    mostrarAlerta('Compra anulada exitosamente', 'success');
-                } catch (error) {
-                    console.error('Error:', error);
-                    mostrarAlerta('Error al anular la compra', 'error');
-                }
-            }
-        }
-
-        // Función para ver detalles de la compra
-        async function verDetalleCompra(id) {
-            const compra = compras.find(c => c._id === id);
-            if (compra) {
-                const proveedor = proveedores.find(p => p._id === compra.proveedor);
-                const cliente = clientes.find(c => c._id === compra.clientId);
-                document.getElementById('viewPurchaseNumber').textContent = compra.numeroCompra || 'N/A';
-                document.getElementById('viewInvoiceNumber').textContent = compra.numeroFactura || 'N/A';
-                document.getElementById('viewPurchaseProvider').textContent = proveedor ? proveedor.nombre_compania : 'N/A';
-                document.getElementById('viewPurchaseTotal').textContent = typeof compra.montoTotal === 'number' ? `$${compra.montoTotal.toFixed(2)}` : 'N/A';
-                document.getElementById('viewPurchaseDate').textContent = compra.fechaCompra ? new Date(compra.fechaCompra).toLocaleDateString() : 'N/A';
-                document.getElementById('viewClientName').textContent = cliente ? cliente.nombre : 'N/A';
-
-                // Cargar detalles de la compra
-                try {
-                    const response = await fetch(`${DETALLE_COMPRA_API_URL}?compraId=${id}`);
-                    if (!response.ok) throw new Error('Error al cargar los detalles de la compra');
-                    const detalles = await response.json();
-                    
-                    const detallesBody = document.getElementById('viewPurchaseDetails');
-                    detallesBody.innerHTML = '';
-                    detalles.forEach(detalle => {
-                        const row = `
-                            <tr>
-                                <td>${detalle.producto || 'N/A'}</td>
-                                <td>${detalle.cantidad || 'N/A'}</td>
-                                <td>$${detalle.precioUnitario ? detalle.precioUnitario.toFixed(2) : 'N/A'}</td>
-                                <td>$${detalle.subtotal ? detalle.subtotal.toFixed(2) : 'N/A'}</td>
-                            </tr>
-                        `;
-                        detallesBody.innerHTML += row;
-                    });
-                } catch (error) {
-                    console.error('Error:', error);
-                    mostrarAlerta('Error al cargar los detalles de la compra', 'error');
-                }
-
-                const viewPurchaseModal = new bootstrap.Modal(document.getElementById('viewPurchaseModal'));
-                viewPurchaseModal.show();
-            }
-        }
-
-        // Función para mostrar alertas usando SweetAlert2
-        function mostrarAlerta(mensaje, tipo) {
-            Swal.fire({
-                icon: tipo,
-                title: tipo === 'success' ? 'Éxito' : 'Error',
-                text: mensaje,
-            });
-        }
-
-        // Función para cerrar modales
-        function cerrarModal(modalId) {
-            const modal = bootstrap.Modal.getInstance(document.getElementById(modalId));
-            modal.hide();
-        }
-
-        // Función para buscar compras
-        function buscarCompras() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const filteredCompras = compras.filter(compra => 
-                (compra.numeroCompra && compra.numeroCompra.toLowerCase().includes(searchTerm)) ||
-                (compra.numeroFactura && compra.numeroFactura.toLowerCase().includes(searchTerm)) ||
-                (proveedores.find(p => p._id === compra.proveedor)?.nombre_compania.toLowerCase().includes(searchTerm))
-            );
-            actualizarTabla(filteredCompras);
-        }
-
-        // Función para crear un nuevo proveedor
-        async function crearNuevoProveedor() {
-            const nombre_compania = document.getElementById('newProviderCompanyName').value;
-            const persona_contacto = document.getElementById('newProviderContact').value;
-            const email = document.getElementById('newProviderEmail').value;
-            const telefono = document.getElementById('newProviderPhone').value;
-            const direccion1 = document.getElementById('newProviderAddress1').value;
-            const direccion2 = document.getElementById('newProviderAddress2').value;
-            const ciudad = document.getElementById('newProviderCity').value;
-            const estado = document.getElementById('newProviderState').value;
-            const codigo_postal = document.getElementById('newProviderZipCode').value;
-            const nit = document.getElementById('newProviderNIT').value;
-
-            if (!nombre_compania || !persona_contacto || !email || !telefono || !direccion1 || !ciudad || !estado || !codigo_postal || !nit) {
-                mostrarAlerta('Por favor, complete todos los campos requeridos.', 'error');
-                return;
-            }
-
-            const nuevoProveedor = {
-                nombre_compania,
-                persona_contacto,
-                email,
-                telefono,
-                direccion1,
-                direccion2,
-                ciudad,
-                estado,
-                codigo_postal,
-                nit
-            };
-
-            try {
-                const response = await fetch(PROVEEDOR_API_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(nuevoProveedor),
-                });
-
-                if (!response.ok) throw new Error('Error al crear el proveedor');
-                
-                await cargarProveedores();
-                cerrarModal('createProviderModal');
-                mostrarAlerta('Proveedor creado exitosamente', 'success');
-                document.getElementById('createProviderForm').reset();
-            } catch (error) {
-                console.error('Error:', error);
-                mostrarAlerta('Error al crear el proveedor', 'error');
-            }
-        }
-
-        // Event Listeners
-        document.addEventListener('DOMContentLoaded', async () => {
-            await Promise.all([cargarCompras(), cargarProveedores(), cargarClientes()]);
-            document.getElementById('searchInput').addEventListener('input', buscarCompras);
-            document.getElementById('saveCreatePurchaseButton').addEventListener('click', crearCompra);
-            document.getElementById('saveEditPurchaseButton').addEventListener('click', guardarCambiosCompra);
-            document.getElementById('saveNewProviderButton').addEventListener('click', crearNuevoProveedor);
-            document.getElementById('createNewProviderBtn').addEventListener('click', () => {
-                const createProviderModal = new bootstrap.Modal(document.getElementById('createProviderModal'));
-                createProviderModal.show();
-            });
-            document.getElementById('editNewProviderBtn').addEventListener('click', () => {
-                const createProviderModal = new bootstrap.Modal(document.getElementById('createProviderModal'));
-                createProviderModal.show();
-            });
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="/Public/assets/js/GeDeCompras.js"></script>
 </body>
 </html>

@@ -35,19 +35,36 @@ exports.obtenerCompras = async (req, res) => {
     }
 };
 
+
 // Obtener compra por ID
 exports.getCompraById = async (req, res) => {
     try {
-        const compra = await Compras.findById(req.params.id).populate('clientId');
+        console.log(`Intentando obtener compra con ID: ${req.params.id}`);
+        const compra = await Compras.findById(req.params.id).lean();
+        
         if (!compra) {
+            console.log(`Compra no encontrada para ID: ${req.params.id}`);
             return res.status(404).json({ message: 'Compra no encontrada.' });
         }
+
+        // Obtener información del cliente y proveedor por separado
+        if (compra.clientId) {
+            const cliente = await Cliente.findById(compra.clientId).lean();
+            compra.clienteNombre = cliente ? cliente.nombre : 'Cliente no encontrado';
+        }
+
+        if (compra.proveedor) {
+            const proveedor = await Proveedor.findById(compra.proveedor).lean();
+            compra.proveedorNombre = proveedor ? proveedor.nombre_compania : 'Proveedor no encontrado';
+        }
+
+        console.log(`Compra encontrada:`, JSON.stringify(compra, null, 2));
         res.status(200).json(compra);
     } catch (error) {
-        res.status(500).json({ error: error.message });
+        console.error(`Error al obtener compra con ID ${req.params.id}:`, error);
+        res.status(500).json({ error: error.message, stack: error.stack });
     }
 };
-
 // Actualizar una compra
 exports.updateCompra = async (req, res) => {
     try {
